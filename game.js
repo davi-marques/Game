@@ -63,19 +63,19 @@ var reset = function reset() {
 
 // Atualiza
 var update = function update(modifier) {
-    if (38 in keysDown) {
+    if (38 in keysDown || 87 in keysDown) {
         // Pressionando a seta para cima
         hero.y -= hero.speed * modifier;
     }
-    if (40 in keysDown) {
+    if (40 in keysDown || 83 in keysDown) {
         // Pressionando a seta para baixo
         hero.y += hero.speed * modifier;
     }
-    if (37 in keysDown) {
+    if (37 in keysDown || 65 in keysDown) {
         // Pressionando a seta para esquerda
         hero.x -= hero.speed * modifier;
     }
-    if (39 in keysDown) {
+    if (39 in keysDown || 68 in keysDown) {
         // Pressionando a seta para direita
         hero.x += hero.speed * modifier;
     }

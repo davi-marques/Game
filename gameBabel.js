@@ -66,16 +66,16 @@ const reset = function(){
 
 // Atualiza
 const update = function(modifier){
-    if (38 in keysDown) { // Pressionando a seta para cima
+    if (38 in keysDown || 87 in keysDown) { // Pressionando a seta para cima
         hero.y -= hero.speed * modifier;
     }
-    if (40 in keysDown) { // Pressionando a seta para baixo
+    if (40 in keysDown || 83 in keysDown) { // Pressionando a seta para baixo
         hero.y += hero.speed * modifier;
     }
-    if (37 in keysDown) { // Pressionando a seta para esquerda
+    if (37 in keysDown || 65 in keysDown) { // Pressionando a seta para esquerda
         hero.x -= hero.speed * modifier;
     }
-    if (39 in keysDown) { // Pressionando a seta para direita
+    if (39 in keysDown || 68 in keysDown) { // Pressionando a seta para direita
         hero.x += hero.speed * modifier;
     }
 
