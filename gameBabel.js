@@ -36,6 +36,8 @@ mosterImage.src = 'images/monster.png';
 // Objetos do jogo
 const hero = {
     speed: 256, // movimento em pixels p/s
+    x: canvas.width / 2,
+    y: canvas.height / 2
 };
 
 const monster = {};
@@ -54,11 +56,10 @@ window.addEventListener('keyup', function (e) {
     delete keysDown[e.keyCode];
 }, false);
 
-// Reseta quando o jogador pegao monstro
-const reset = function(){
-    hero.x = canvas.width / 2;
-    hero.y = canvas.height / 2
 
+// Reseta quando o jogador pega o monstro
+
+const reset = function(){
     // Posiciona o monstro randomicamente na tela
     monster.x = 32 + (Math.random() * (canvas.width - 64));
     monster.y = 32 + (Math.random() * (canvas.height - 64));
