@@ -33,12 +33,25 @@ mosterImage.onload = function() {
 mosterImage.src = 'images/monster.png';
 
 
+// Imagem da Estrela
+let starReady = false;
+const starImage = new Image();
+starImage.onload = function() {
+    starReady = true;
+};
+starImage.src = 'images/star.png';
+
 // Objetos do jogo
 const hero = {
     speed: 256, // movimento em pixels p/s
     x: canvas.width / 2,
     y: canvas.height / 2
 };
+
+const star = {
+    x: canvas.width / 2,
+    y: canvas.height / 2 
+}
 
 const monster = {};
 
@@ -94,7 +107,7 @@ const update = function(modifier){
     }
 };
 
-// Renderiza tudo
+// Renderiza tudo - desenha
 
 const render = function () {
     if (bgReady) {
@@ -113,6 +126,10 @@ const render = function () {
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
     ctx.fillText('Mostros pegos: ' + monstersCaught, 32, 32);
+
+    if (monstersCaught == 10){
+        ctx.drawImage(starImage, star.x, star.y)
+    }
 };
 
 // Controla o loop do jogo

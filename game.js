@@ -31,9 +31,22 @@ mosterImage.onload = function () {
 };
 mosterImage.src = 'images/monster.png';
 
+// Imagem da Estrela
+var starReady = false;
+var starImage = new Image();
+starImage.onload = function () {
+    starReady = true;
+};
+starImage.src = 'images/star.png';
+
 // Objetos do jogo
 var hero = {
     speed: 256, // movimento em pixels p/s
+    x: canvas.width / 2,
+    y: canvas.height / 2
+};
+
+var star = {
     x: canvas.width / 2,
     y: canvas.height / 2
 };
@@ -90,7 +103,7 @@ var update = function update(modifier) {
     }
 };
 
-// Renderiza tudo
+// Renderiza tudo - desenha
 
 var render = function render() {
     if (bgReady) {
@@ -109,6 +122,10 @@ var render = function render() {
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
     ctx.fillText('Mostros pegos: ' + monstersCaught, 32, 32);
+
+    if (monstersCaught == 10) {
+        ctx.drawImage(starImage, star.x, star.y);
+    }
 };
 
 // Controla o loop do jogo
