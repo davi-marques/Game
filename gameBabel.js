@@ -44,6 +44,7 @@ const monster = {};
 
 let monstersCaught = 0;
 
+const pegou = new Audio('audio/track.mp3');
 
 // Controle do teclado
 const keysDown = {};
@@ -89,6 +90,7 @@ const update = function(modifier){
     ) {
         monstersCaught++;
         reset();
+        pegou.play();
     }
 };
 
