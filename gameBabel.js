@@ -50,7 +50,7 @@ const hero = {
 
 const star = {
     x: canvas.width / 2,
-    y: canvas.height / 2 
+    y: canvas.height / 2
 }
 
 const monster = {};
@@ -127,8 +127,8 @@ const render = function () {
     ctx.textBaseline = 'top';
     ctx.fillText('Mostros pegos: ' + monstersCaught, 32, 32);
 
-    if (monstersCaught == 10){
-        ctx.drawImage(starImage, star.x, star.y)
+    if (monstersCaught%10 == 0){
+        ctx.drawImage(starImage, star.x -15, star.y -15);
     }
 };
 
