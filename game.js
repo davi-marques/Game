@@ -123,8 +123,10 @@ var render = function render() {
     ctx.textBaseline = 'top';
     ctx.fillText('Mostros pegos: ' + monstersCaught, 32, 32);
 
-    if (monstersCaught % 10 == 0) {
-        ctx.drawImage(starImage, star.x - 15, star.y - 15);
+    if (monstersCaught > 0) {
+        if (monstersCaught % 10 == 0) {
+            ctx.drawImage(starImage, star.x - 15, star.y - 15);
+        }
     }
 };
 
