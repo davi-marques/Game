@@ -26,20 +26,13 @@ heroImage.src = 'images/hero.png';
 
 // Imagem do mostro
 let monsterReady = false;
-const mosterImage = new Image();
-mosterImage.onload = function() {
+const monsterImage = new Image();
+monsterImage.onload = function() {
     monsterReady = true;
 };
-mosterImage.src = 'images/monster.png';
+monsterImage.src = 'images/monster.png';
 
-
-// Imagem da Estrela
-let starReady = false;
-const starImage = new Image();
-starImage.onload = function() {
-    starReady = true;
-};
-starImage.src = 'images/star.png';
+let star = {}
 
 // Objetos do jogo
 const hero = {
@@ -47,11 +40,6 @@ const hero = {
     x: canvas.width / 2,
     y: canvas.height / 2
 };
-
-const star = {
-    x: canvas.width / 2,
-    y: canvas.height / 2
-}
 
 const monster = {};
 
@@ -117,7 +105,7 @@ const render = function () {
         ctx.drawImage(heroImage, hero.x, hero.y)
     }
     if (monsterReady) {
-        ctx.drawImage(mosterImage, monster.x, monster.y)
+        ctx.drawImage(monsterImage, monster.x, monster.y)
     }
 
     // Pontuação
@@ -129,9 +117,11 @@ const render = function () {
 
     if (monstersCaught > 0) {
         if (monstersCaught%10 == 0){
-            ctx.drawImage(starImage, star.x -15, star.y -15);
-        }
-    }
+            monsterImage.src = 'images/star.png';
+        } else {
+            monsterImage.src = 'images/monster.png';
+        };
+    };
 };
 
 // Controla o loop do jogo
