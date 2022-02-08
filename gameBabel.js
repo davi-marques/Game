@@ -45,7 +45,9 @@ const monster = {};
 
 let monstersCaught = 0;
 
+// Sons do jogo
 const pegou = new Audio('audio/track.mp3');
+const pegouStar = new Audio('audio/vintage.mp3')
 
 // Controle do teclado
 const keysDown = {};
@@ -118,6 +120,7 @@ const render = function () {
     if (monstersCaught > 0) {
         if (monstersCaught%10 == 0){
             monsterImage.src = 'images/star.png';
+            pegouStar.play()
         } else {
             monsterImage.src = 'images/monster.png';
         };
