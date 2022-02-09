@@ -67,6 +67,12 @@ var reset = function reset() {
     monster.y = 32 + Math.random() * (canvas.height - 64);
 };
 
+function Encostaram() {
+    if (hero.x <= monster.x + 32 && monster.x <= hero.x + 32 && hero.y <= monster.y + 32 && monster.y <= hero.y + 32) {
+        return true;
+    }
+}
+
 // Atualiza
 var update = function update(modifier) {
     if (38 in keysDown || 87 in keysDown) {
@@ -87,7 +93,7 @@ var update = function update(modifier) {
     }
 
     // Se os personagems se enconstaram
-    if (hero.x <= monster.x + 32 && monster.x <= hero.x + 32 && hero.y <= monster.y + 32 && monster.y <= hero.y + 32) {
+    if (Encostaram()) {
         monstersCaught++;
         reset();
         pegou.play();
