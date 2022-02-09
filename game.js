@@ -1,7 +1,7 @@
 'use strict';
 
 // Cria o canvas
-var canvas = document.createElement('canvas');
+var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 480;
