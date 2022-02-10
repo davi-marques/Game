@@ -65,8 +65,8 @@ window.addEventListener('keyup', function (e) {
 
 const reset = function(){
     // Posiciona o monstro randomicamente na tela
-    monster.x = 32 + (Math.random() * (canvas.width - 64));
-    monster.y = 32 + (Math.random() * (canvas.height - 64));
+    monster.x = 32 + (Math.random() * (canvas.width - 96));
+    monster.y = 32 + (Math.random() * (canvas.height - 96));
 }
 
 function Encostaram() {
