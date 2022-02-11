@@ -5,7 +5,6 @@ var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 480;
-document.body.appendChild(canvas);
 
 // Imagem de fundo
 var bgReady = false;
