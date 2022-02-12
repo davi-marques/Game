@@ -46,7 +46,7 @@ let monstersCaught = 0;
 
 // Sons do jogo
 const pegou = new Audio('audio/track.mp3');
-const pegouStar = new Audio('audio/vintage.mp3')
+const pegouStar = new Audio('audio/vintage.mp3');
 
 // Controle do teclado
 const keysDown = {};
