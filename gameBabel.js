@@ -31,7 +31,7 @@ monsterImage.onload = function() {
 };
 monsterImage.src = 'images/monster.png';
 
-let star = {}
+let star = {};
 
 // Objetos do jogo
 const hero = {
@@ -82,7 +82,7 @@ function Encostaram() {
 // Atualiza
 const update = function(modifier){
     // Teclas precionadas
-    
+
     if (38 in keysDown || 87 in keysDown) { // Pressionando a seta para cima
         hero.y -= hero.speed * modifier;
     }
@@ -111,10 +111,10 @@ const render = function () {
         ctx.drawImage(bgImage, 0, 0);
     }
     if (heroReady) {
-        ctx.drawImage(heroImage, hero.x, hero.y)
+        ctx.drawImage(heroImage, hero.x, hero.y);
     }
     if (monsterReady) {
-        ctx.drawImage(monsterImage, monster.x, monster.y)
+        ctx.drawImage(monsterImage, monster.x, monster.y);
     }
 
     // Pontuação
@@ -128,7 +128,7 @@ const render = function () {
         if (monstersCaught%10 == 0){
             // Mostra estrela e o som
             monsterImage.src = 'images/star.png';
-            pegouStar.play()
+            pegouStar.play();
 
             // Pontuação de estrelas
             ctx.fillStyle = '#fff';
@@ -158,7 +158,7 @@ const main = function(){
 
 // Suporte cross-browser para requestAnimationFrame
 const w = window;
-const requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame
+const requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
 // Que comece o jogo!
 let then = Date.now();
