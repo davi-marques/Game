@@ -30,8 +30,6 @@ monsterImage.onload = function () {
 };
 monsterImage.src = 'images/monster.png';
 
-var star = {};
-
 // Objetos do jogo
 var hero = {
     speed: 256, // movimento em pixels p/s
