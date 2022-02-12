@@ -123,6 +123,13 @@ var render = function render() {
         if (monstersCaught % 10 == 0) {
             monsterImage.src = 'images/star.png';
             pegouStar.play();
+
+            // Pontuação de estrelas
+            ctx.fillStyle = '#fff';
+            ctx.font = '24px Helvetica';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'top';
+            ctx.fillText('Estrelas pegas: ' + (monstersCaught - 10) / 10, 38, 419);
         } else {
             monsterImage.src = 'images/monster.png';
         };
