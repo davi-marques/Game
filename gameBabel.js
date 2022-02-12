@@ -81,6 +81,8 @@ function Encostaram() {
 
 // Atualiza
 const update = function(modifier){
+    // Teclas precionadas
+    
     if (38 in keysDown || 87 in keysDown) { // Pressionando a seta para cima
         hero.y -= hero.speed * modifier;
     }
@@ -124,6 +126,7 @@ const render = function () {
 
     if (monstersCaught > 0) {
         if (monstersCaught%10 == 0){
+            // Mostra estrela e o som
             monsterImage.src = 'images/star.png';
             pegouStar.play()
 
