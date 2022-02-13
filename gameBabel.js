@@ -130,6 +130,8 @@ const update = function(modifier){
 // Renderiza tudo - desenha
 
 const render = function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     if (bgReady) {
         ctx.drawImage(bgImage, 0, 0);
     }

@@ -127,6 +127,8 @@ var update = function update(modifier) {
 // Renderiza tudo - desenha
 
 var render = function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     if (bgReady) {
         ctx.drawImage(bgImage, 0, 0);
     }
