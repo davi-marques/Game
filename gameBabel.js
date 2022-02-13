@@ -84,7 +84,7 @@ function Encostaram() {
     }
 }
 
-function animation(){
+function animationFront(){
     if (40 in keysDown || 83 in keysDown) {
         heroImage.src = 'images/hero-and.png';
 
@@ -138,6 +138,7 @@ const render = function () {
 
     ctx.drawImage(heroImage, hero.srcX, hero.srcY, hero.largura, hero.altura, hero.x, hero.y, hero.largura, hero.altura);
     animation();
+    animationFront();
 
     if (monsterReady) {
         ctx.drawImage(monsterImage, monster.x, monster.y);
