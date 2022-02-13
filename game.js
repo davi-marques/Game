@@ -34,7 +34,15 @@ monsterImage.src = 'images/monster.png';
 var hero = {
     speed: 256, // movimento em pixels p/s
     x: canvas.width / 2,
-    y: canvas.height / 2
+    y: canvas.height / 2,
+
+    // onde começa na imagem
+    srcX: 0,
+    srcY: 0,
+
+    // Coordenadas da imagem
+    altura: 32,
+    largura: 32
 };
 
 var monster = {};
