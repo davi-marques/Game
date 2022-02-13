@@ -32,7 +32,7 @@ monsterImage.src = 'images/monster.png';
 
 // Objetos do jogo
 const hero = {
-    speed: 256, // movimento em pixels p/s
+    speed: 230, // movimento em pixels p/s
     x: canvas.width / 2,
     y: canvas.height / 2,
 
