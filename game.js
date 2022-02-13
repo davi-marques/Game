@@ -18,11 +18,7 @@ bgImage.onload = function () {
 bgImage.src = 'images/background.png';
 
 // Imagem do herói
-var heroReady = false;
 var heroImage = new Image();
-heroImage.onload = function () {
-    heroReady = true;
-};
 heroImage.src = 'images/hero.png';
 
 // Imagem do mostro
@@ -116,9 +112,9 @@ var render = function render() {
     if (bgReady) {
         ctx.drawImage(bgImage, 0, 0);
     }
-    if (heroReady) {
-        ctx.drawImage(heroImage, hero.x, hero.y);
-    }
+
+    ctx.drawImage(heroImage, hero.srcX, hero.srcY, hero.largura, hero.altura, hero.x, hero.y, hero.largura, hero.altura);
+
     if (monsterReady) {
         ctx.drawImage(monsterImage, monster.x, monster.y);
     }
