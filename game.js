@@ -6,6 +6,9 @@ var ctx = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 480;
 
+// Contador de sprites
+var count = 0;
+
 // Imagem de fundo
 var bgReady = false;
 var bgImage = new Image();
