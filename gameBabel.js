@@ -84,6 +84,24 @@ function Encostaram() {
     }
 }
 
+function animation(){
+    if (40 in keysDown || 83 in keysDown) {
+        heroImage.src = 'images/hero-and.png';
+
+        count++;
+
+        if(count >= 16){
+            count = 0;
+        }
+
+        hero.srcX = Math.floor(count / 8) * hero.largura;
+    } else {
+        count = 0;
+        heroImage.src = 'images/hero.png';
+        hero.srcX = Math.floor(count / 8) * hero.largura;
+    }
+}
+
 // Atualiza
 const update = function(modifier){
     // Teclas precionadas
@@ -117,7 +135,8 @@ const render = function () {
     }
 
     ctx.drawImage(heroImage, hero.srcX, hero.srcY, hero.largura, hero.altura, hero.x, hero.y, hero.largura, hero.altura);
-    
+    animation();
+
     if (monsterReady) {
         ctx.drawImage(monsterImage, monster.x, monster.y);
     }
