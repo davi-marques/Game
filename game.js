@@ -88,9 +88,10 @@ function animation() {
         }
 
         hero.srcX = Math.floor(count / 8) * hero.largura;
+        heroImage.src = 'images/hero-and-costas.png';
     } else {
+        heroImage.src = 'images/hero-sprites.png';
         count = 0;
-        heroImage.src = 'images/hero.png';
         hero.srcX = Math.floor(count / 8) * hero.largura;
     }
 }
