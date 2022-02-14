@@ -19,7 +19,7 @@ bgImage.src = 'images/background.png';
 
 // Imagem do herói
 var heroImage = new Image();
-heroImage.src = 'images/hero.png';
+heroImage.src = 'images/hero-sprites.png';
 
 // Imagem do mostro
 var monsterReady = false;
