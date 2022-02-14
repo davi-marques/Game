@@ -78,17 +78,30 @@ function Encostaram() {
 }
 
 function animation() {
-    if (40 in keysDown || 83 in keysDown) {
+    if (40 in keysDown || 83 in keysDown || 37 in keysDown || 65 in keysDown) {
         heroImage.src = 'images/hero-and.png';
 
         count++;
 
-        if (count >= 16) {
+        hero.srcY = hero.altura * 0;
+
+        if (count >= 20) {
             count = 0;
         }
 
-        hero.srcX = Math.floor(count / 8) * hero.largura;
+        hero.srcX = Math.floor(count / 10) * hero.largura;
+    } else if (38 in keysDown || 87 in keysDown || 39 in keysDown || 68 in keysDown) {
         heroImage.src = 'images/hero-and-costas.png';
+
+        count++;
+
+        hero.srcY = hero.altura * 0;
+
+        if (count >= 20) {
+            count = 0;
+        }
+
+        hero.srcX = Math.floor(count / 10) * hero.largura;
     } else {
         heroImage.src = 'images/hero-sprites.png';
         count = 0;
