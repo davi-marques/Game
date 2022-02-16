@@ -19,7 +19,7 @@ bgImage.src = 'images/background.png';
 
 // Imagem do herói
 const heroImage = new Image();
-heroImage.src = 'images/hero-sprites.png';
+heroImage.src = 'images/hero.png';
 
 
 // Imagem do mostro
@@ -110,7 +110,7 @@ function animation(){
 
         hero.srcX = Math.floor(count / 10) * hero.largura;
     } else {
-        heroImage.src = 'images/hero-sprites.png'
+        heroImage.src = 'images/hero.png'
         count = 0;
         hero.srcX = Math.floor(count / 8) * hero.largura;
     }
