@@ -159,7 +159,7 @@ const render = function () {
 
     // Pontuação
     ctx.fillStyle = '#fff';
-    ctx.font = '24px Helvetica';
+    ctx.font = "17px 'Press Start 2P'";
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
     ctx.fillText('Mostros pegos: ' + monstersCaught, 37, 37);
@@ -172,7 +172,7 @@ const render = function () {
 
             // Pontuação de estrelas
             ctx.fillStyle = '#fff';
-            ctx.font = '24px Helvetica';
+            ctx.font = "17px 'Press Start 2P'";
             ctx.textAlign = 'left';
             ctx.textBaseline = 'top';
             ctx.fillText('Estrelas pegas: ' + ((monstersCaught - 10) / 10), 38, 419);
