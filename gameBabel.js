@@ -1,3 +1,5 @@
+//              PROPIEDADES DO JOGO
+
 // Cria o canvas
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -65,6 +67,11 @@ window.addEventListener('keyup', function (e) {
     delete keysDown[e.keyCode];
 }, false);
 
+
+
+
+
+//              FUNÇÕES DO JOGO
 
 // Reseta quando o jogador pega o monstro
 
