@@ -79,6 +79,7 @@ function Encostaram() {
 
 function animation() {
     if (40 in keysDown || 83 in keysDown) {
+        // Para baixo
         count++;
         hero.srcY = hero.altura * 1;
         if (count >= 20) {
@@ -86,6 +87,7 @@ function animation() {
         }
         hero.srcX = Math.floor(count / 10) * hero.largura;
     } else if (38 in keysDown || 87 in keysDown) {
+        // Para cima
         count++;
         hero.srcY = hero.altura * 5;
         if (count >= 20) {
@@ -93,6 +95,7 @@ function animation() {
         }
         hero.srcX = Math.floor(count / 10) * hero.largura;
     } else if (39 in keysDown || 68 in keysDown) {
+        // Para direita
         count++;
         hero.srcY = hero.altura * 2;
         if (count >= 20) {
@@ -100,8 +103,9 @@ function animation() {
         }
         hero.srcX = Math.floor(count / 10) * hero.largura;
     } else if (37 in keysDown || 65 in keysDown) {
+        // Para esquerda
         count++;
-        hero.srcY = hero.altura * 3;
+        hero.srcY = hero.altura * 2;
         if (count >= 20) {
             count = 0;
         }
