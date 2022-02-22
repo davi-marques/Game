@@ -38,7 +38,7 @@ var hero = {
 
     // onde começa na imagem
     srcX: 0,
-    srcY: 0,
+    srcY: 1,
 
     // Coordenadas da imagem
     altura: 32,
