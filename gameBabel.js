@@ -9,6 +9,7 @@ canvas.height = 482;
 // Contador de sprites
 let count = 0;
 let posI = 0;
+let Up_ou_Down = false;
 
 
 // Imagem de fundo
