@@ -82,18 +82,32 @@ function Encostaram() {
     }
 }
 
+var Sprite = function Sprite(posY) {
+    count++;
+    hero.srcY = hero.altura * posY;
+    if (count >= 20) {
+        count = 0;
+    }
+    hero.srcX = Math.floor(count / 10) * hero.largura;
+};
+
 function animation() {
+
     if (40 in keysDown || 83 in keysDown) {
         // Para baixo
+        Sprite(1);
         posI = 0;
     } else if (38 in keysDown || 87 in keysDown) {
         // Para cima
+        Sprite(5);
         posI = 4;
     } else if (39 in keysDown || 68 in keysDown) {
         // Para direita
+        Sprite(3);
         posI = 3;
     } else if (37 in keysDown || 65 in keysDown) {
         // Para esquerda
+        Sprite(2);
         posI = 2;
     } else {
         count = 0;
