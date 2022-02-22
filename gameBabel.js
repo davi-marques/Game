@@ -114,7 +114,7 @@ function animation(){
 
     } else if (37 in keysDown || 65 in keysDown) { // Para esquerda
         count++;
-        hero.srcY = hero.altura * 3;
+        hero.srcY = hero.altura * 2;
         if(count >= 20){
             count = 0;
         }
