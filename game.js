@@ -8,6 +8,7 @@ canvas.height = 482;
 
 // Contador de sprites
 var count = 0;
+var posI = 0;
 
 // Imagem de fundo
 var bgReady = false;
