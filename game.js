@@ -78,33 +78,37 @@ function Encostaram() {
 }
 
 function animation() {
-    if (40 in keysDown || 83 in keysDown || 37 in keysDown || 65 in keysDown) {
-        heroImage.src = 'images/hero-and.png';
-
+    if (40 in keysDown || 83 in keysDown) {
         count++;
-
-        hero.srcY = hero.altura * 0;
-
+        hero.srcY = hero.altura * 1;
         if (count >= 20) {
             count = 0;
         }
-
         hero.srcX = Math.floor(count / 10) * hero.largura;
-    } else if (38 in keysDown || 87 in keysDown || 39 in keysDown || 68 in keysDown) {
-        heroImage.src = 'images/hero-and-costas.png';
-
+    } else if (38 in keysDown || 87 in keysDown) {
         count++;
-
-        hero.srcY = hero.altura * 0;
-
+        hero.srcY = hero.altura * 5;
         if (count >= 20) {
             count = 0;
         }
-
+        hero.srcX = Math.floor(count / 10) * hero.largura;
+    } else if (39 in keysDown || 68 in keysDown) {
+        count++;
+        hero.srcY = hero.altura * 2;
+        if (count >= 20) {
+            count = 0;
+        }
+        hero.srcX = Math.floor(count / 10) * hero.largura;
+    } else if (37 in keysDown || 65 in keysDown) {
+        count++;
+        hero.srcY = hero.altura * 3;
+        if (count >= 20) {
+            count = 0;
+        }
         hero.srcX = Math.floor(count / 10) * hero.largura;
     } else {
-        heroImage.src = 'images/hero.png';
         count = 0;
+        hero.srcY = 0;
         hero.srcX = Math.floor(count / 8) * hero.largura;
     }
 }
