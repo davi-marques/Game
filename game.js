@@ -175,7 +175,7 @@ var render = function render() {
     ctx.font = "17px 'Press Start 2P'";
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
-    ctx.fillText('Mostros pegos: ' + monstersCaught, 37, 37);
+    ctx.fillText('Monstros pegos: ' + monstersCaught, 37, 37);
 
     if (monstersCaught > 0) {
         if (monstersCaught % 10 == 0) {
