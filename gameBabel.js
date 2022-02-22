@@ -94,47 +94,17 @@ function Encostaram() {
 
 function animation(){
     if (40 in keysDown || 83 in keysDown) { // Para baixo
-        count++;
         posI = 0;
-        hero.srcY = hero.altura * 1;
-        if(count >= 20){
-            count = 0;
-        }
-        hero.srcX = Math.floor(count / 10) * hero.largura;
-
 
     } else if (38 in keysDown || 87 in keysDown) { // Para cima
-        count++;
         posI = 4;
-        hero.srcY = hero.altura * 5;
-        if(count >= 20){
-            count = 0;
-        }
-        hero.srcX = Math.floor(count / 10) * hero.largura;
-
 
     } else if (39 in keysDown || 68 in keysDown) { // Para direita
-        count++;
         posI = 3;
-        hero.srcY = hero.altura * 3;
-        if(count >= 20){
-            count = 0;
-        }
-        hero.srcX = Math.floor(count / 10) * hero.largura;
-
 
     } else if (37 in keysDown || 65 in keysDown) { // Para esquerda
-        count++;
         posI = 2;
-        hero.srcY = hero.altura * 2;
-        if(count >= 20){
-            count = 0;
-        }
-        hero.srcX = Math.floor(count / 10) * hero.largura;
 
-    }
-    
-    else {
         count = 0;
         hero.srcY = hero.altura * posI;
         hero.srcX = Math.floor(count / 8) * hero.largura;
