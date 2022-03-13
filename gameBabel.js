@@ -152,8 +152,8 @@ const update = function(modifier){
         hero.x += hero.speed * modifier;
     }
 
-    hero.x = Math.max(0, Math.min(canvas.width - hero.largura, hero.x));
-    hero.y = Math.max(0, Math.min(canvas.height - hero.altura, hero.y));
+    hero.x = Math.max(28, Math.min(canvas.width - 28 - hero.largura, hero.x));
+    hero.y = Math.max(28, Math.min(canvas.height - 28 - hero.altura, hero.y));
 
     // Se os personagems se enconstaram
     if (Encostaram()) {
