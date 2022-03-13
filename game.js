@@ -146,6 +146,9 @@ var update = function update(modifier) {
         hero.x += hero.speed * modifier;
     }
 
+    hero.x = Math.max(0, Math.min(canvas.width - hero.largura, hero.x));
+    hero.y = Math.max(0, Math.min(canvas.height - hero.altura, hero.y));
+
     // Se os personagems se enconstaram
     if (Encostaram()) {
         monstersCaught++;
